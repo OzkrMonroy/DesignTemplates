@@ -1,0 +1,126 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #FEFEFE;
+	font-family: 'PT Sans', sans-serif;	
+}
+header{
+	width: 100%;
+}
+.menu-bar{
+	display: none;
+}
+header nav ul li{
+	background-color: #023859;
+}
+header nav{
+	/*z-index: 1000;*/
+	background-color: #023859;
+	max-width: 1000px;
+	width: 95%;
+	margin: 0 auto;
+}
+header nav ul{
+	list-style: none;
+}
+header nav ul li{
+	display: inline-block;
+	position: relative;
+}
+header nav ul li:hover{
+	background-color: #E6344A;
+}
+header a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+}
+header a span{
+	margin-right: 10px;
+}
+.angle-down{
+	float: right;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/*Submenu*/
+header nav ul li .children{
+	/*max-height: 0;*/
+	display: none;
+	overflow: hidden;	
+	background-color: #011826;
+	position: absolute;
+	transition: all .3s ease;
+	width: 100%;
+	z-index: 1000;
+}
+header nav ul li:hover .children {
+	/*max-height: 500px;
+	overflow: visible;*/
+	display: block;
+}
+header nav ul li .children li{
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+header nav ul li .children li a{
+	display: block;
+}
+header nav ul li .children li a span{
+	float: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0;
+	margin-left: 10px
+}
+
+@media screen and (max-width: 800px){
+	body{
+		padding-top: 72px;
+	}
+	.menu-bar{
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		background-color: #E6344A;
+	}
+	header nav{		
+		position: fixed;
+		width: 80%;
+		height: calc(100% - 72px);
+		overflow: scroll;
+		right: 100%;
+		margin: 0;
+	}
+	header nav ul li{
+		display: block;
+		border-bottom: 1px solid rgba(255, 255, 255, .5);
+	}
+	header nav ul li a{
+		display: block;
+	}
+	header nav ul li:hover .children{
+		/*max-height: 0;
+		overflow: hidden;*/
+		display: none;
+	}
+	header nav ul li .children{
+		width: 100%;
+		position: relative;
+	}
+	header nav ul li .children li a{
+		/*display: block;*/
+		margin-left: 40px;
+	}
+	.angle-down{
+		float: right;
+	}
+}
