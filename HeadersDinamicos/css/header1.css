@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	text-align: center;
+	color: white;
+}
+header, #banner, #content{
+	width: 100%;	
+}
+header{
+	height: 100px;
+	position: fixed;
+	z-index: 10;
+	background-color: #f94792;	
+}
+#banner{
+	height: 500px;
+	position: fixed;
+	top: 100px;
+	background-color: #490323;	
+}
+#content{
+	position: relative;
+	height: 1500px;
+	top: 400px;
+	background-color: #503858;
+}
