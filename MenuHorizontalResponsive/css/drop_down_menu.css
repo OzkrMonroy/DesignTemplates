@@ -1,0 +1,38 @@
+.menu {
+ list-style: none;
+ margin-top: 0;
+ margin-bottom: 0;
+ padding-left: 0;
+ display: flex;
+ background: #333;
+}
+
+.menu-item{
+ position: relative;
+}
+
+.menu-item:hover{
+ background: rgba(0,0,0,.5);
+}
+
+.menu-item:hover > .submenu {
+ display: block;
+}
+
+.menu-link {
+ text-decoration: none;
+ color: #ddd;
+ display: block;
+ padding: .5em 1em;
+}
+
+.submenu {
+ position: absolute;
+ top: 100%;
+ display: none;
+}
+
+.submenu .submenu {
+ top: 0;
+ left: 100%;
+}

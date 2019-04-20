@@ -1,3 +1,6 @@
+:root{
+	--shadow: rgba(0,0,0,.3);
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -7,52 +10,49 @@
 body{
 	font-family: 'Cabin', sans-serif;
 }
-header{
-	width: 100%;
-	background-color: #2196f3;
-	display: flex;
-	justify-content: center;
+.nav{
+	box-shadow: 0 0 5px 3px var(--shadow);
 }
-ul{
+.menu{
 	list-style: none;
-}
-header > nav > ul{
-	width: 100%;
-	line-height: 3em;
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #2196f3;	
 }
-header nav li{
+.menu-item{
 	position: relative;		
 	transition: all .4s ease;
 }
-header nav a{
+.menu-link{
 	color: white;
 	text-decoration: none;
 	display: block;
-	padding: 5px 20px;
-	font-weight: bold;
-	transition: all .5s ease;
+	padding: 1.2em;
+	font-weight: 700;
+	/*transition: all .5s ease;*/
 }
-header > nav > ul > li:hover{
-	background-color: rgba(0,0,0,.3);
+.item:hover{
+	background-color: var(--shadow);
 }
-header nav li:hover > ul{
-	max-height: 500px;
-	overflow: visible;
-	box-shadow: 0px 0px 5px 1px rgba(0,0,0,.3);
+.menu-item:hover > .submenu{
+	display: block;
 }
-.menu span{
+.fas,
+.fab{
 	margin-right: 8px;
 }
 
 /*Primer nivel*/
-.menu ul{
-	position: absolute;
-	max-height: 0;
-	overflow: hidden;
-	transition: all .5s ease;
+.submenu{
+	position: absolute;	
+	top: 100%;	
+	display: none;
+	background-color: white;	
+	width: 200px;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
 }
-.menu ul:before{
+.menu .submenu:before{
 	content: ''	;
 	width: 0;
 	height: 0;
@@ -64,23 +64,19 @@ header nav li:hover > ul{
 	left: 20px;
 }
 /*Segundo nivel*/
-.menu ul{
-	background-color: white;	
-	width: 200px;
-}
-.submenu li:hover > a{
+.submenu .menu-item:hover > .menu-link{
 	color: #2196f3;
 }
 
-.submenu a{
+.submenu .menu-link{
 	color: black;
 }
 /*Tercer nivel*/
-.submenu ul {
-	left: 104%;
+.submenu .submenu {
+	left: 103%;
 	top: 0;	
 }
-.submenu ul:before{
+.submenu .submenu:before{
 	border-bottom: 8px solid white;
 	position: absolute;
 	top: 18px;
@@ -94,7 +90,7 @@ main{
 	max-width: 1000px;	
 	margin: 20px auto;
 	padding: 20px;
-	box-shadow: 0px 2px 5px rgba(0,0,0,0.75);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.75);
 }
 main article h1{
 	font-weight: normal;

@@ -5,13 +5,13 @@ body{
 	padding-bottom: 200em;
 }
 section{
+	position: relative;
 	border: 2px dashed steelblue;
 	width: 500px;
 	height: 400px;
 	margin: 5em auto;
 	padding: 2em;
-	display: table;
-	position: relative;
+	display: table;	
 }
 div{
 	border-radius: 5px;
@@ -20,15 +20,37 @@ div{
 	font-weight: bold;
 	line-height: 1.5;
 	padding: .5em;
-	text-align: center;
-	background-color: rgba(173, 216, 230, .7);
+	text-align: center;	
+	color: white;
 }
 
 /*Posicionamiento*/
 .uno{
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	/*top: 50%;
-	transform: translateY(-50%); Top y transform lo utilzamos para centrar verticalmente*/
+	position: absolute;		
+	width: 100px;
+	height: 100px;
+	top: 100px;
+	background: steelblue;
+	z-index: 100;
 }
+.dos{
+	position: absolute;	
+	width: 100px;
+	height: 100px;
+	top: 190px;
+	left: 120px;
+	background: red;
+	z-index: 90;
+}
+.tres{
+	position: absolute;	
+	width: 100px;
+	height: 100px;
+	top: 290px;
+	left: 210px;
+	background:blue;
+	z-index: 95;
+}
+
+
+/*transform: translateY(-50%); Top y transform lo utilzamos para centrar verticalmente
